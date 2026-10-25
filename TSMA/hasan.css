@@ -1,0 +1,62 @@
+:root {
+    --ana-renk: #14213D;
+    --vurgu-renk: #dc2323;
+    --baglanti-renk: #4b1d70;
+    --zemin: #F2F4F7;
+    --metin: #1F2937;
+    --kenar: #D0D5DD;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--metin);
+    background-color: var(--zemin);
+}
+
+h1, h2 {
+    color: var(--ana-renk);
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+a {
+    color: var(--baglanti-renk);
+}
+
+a:hover {
+    color: var(--vurgu-renk);
+}
+
+.vurgu {
+    color: var(--vurgu-renk);
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th:nth-child(1), td:nth-child(1) { width: 30%; }
+th:nth-child(2), td:nth-child(2) { width: 15%; }
+th:nth-child(3), td:nth-child(3) { width: 55%; }
+
+tr th:nth-child(4), tr td:nth-child(4) { width: 40%; }
+tr:has(th:nth-child(4)) th:nth-child(1), tr:has(td:nth-child(4)) td:nth-child(1) { width: 25%; }
+tr:has(th:nth-child(4)) th:nth-child(2), tr:has(td:nth-child(4)) td:nth-child(2) { width: 15%; }
+tr:has(th:nth-child(4)) th:nth-child(3), tr:has(td:nth-child(4)) td:nth-child(3) { width: 20%; }
