@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Formu</title>
+    <link rel="stylesheet" href="hasan.css">
+</head>
+<body>
+    <header>
+        <h1>Türk Silah ve Mühimmat Arşivi</h1>
+        <h2>Kategoriler</h2>
+        <nav>
+            <ul>
+                <li><a href="anasayfa.html">Ana Sayfa</a></li>
+                <li><a href="osmanlı.html">Osmanlı İmparatorluğu</a></li>
+                <li><a href="tc.html">Türkiye Cumhuriyeti</a></li>
+                <li><a href="iletişimformu.html" class="aktif">İletişim Formu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>İletişim Formu</h2>
+        <form id="İletişimFormu">
+            <p>
+                <label for="ad">Ad</label><br>
+                <input type="text" name="ad">
+            </p>
+            <p>
+                <label for="soyad">Soyad</label><br>
+                <input type="text" name="soyad">
+            </p>
+            <p>
+                <label for="cinsiyet">Cinsiyet</label><br>
+                <select name="cinsiyet">
+                        <option value="Erkek">Erkek</option>
+                        <option value="Kadın">Kadın</option>
+                        <option value="A101 Poşeti">A101 Poşeti</option>
+                </select>
+            </p>
+            <p>
+                <label for="tcno">TC Numarası</label><br>
+                <input type="number" name="tc">
+            </p>
+            <p>
+                <label for="eposta">E-Mail Adresi</label><br>
+                <input type="email" name="posta">
+            </p>
+            <p>
+                <label for="telefon">Telefon</label><br>
+                <input type="number" name="telefon">
+            </p>
+            <p>
+                <label for="kurum">Kurum/Kuruluş</label><br>
+                <select name="departman">
+                        <option value="Türk Tarih Kurumu">Türk Tarih Kurumu</option>
+                        <option value="Türk Dil Kurumu">Türk Dil Kurumu</option>
+                        <option value="Yükseköğretim Kurulu">Yükseköğretim Kurulu</option>
+                        <option value="Radyo ve Televizyon Üst Kurulu">Radyo ve Televizyon Üst Kurulu</option>
+                        <option value="Cumhurbaşkanlığı">Cumhurbaşkanlığı</option>
+                        <option value="Diğer Kamu Kurumları">Diğer Kamu Kurumları</option>
+                        <option value="TC Vatandaşı">TC Vatandaşı</option>
+                </select>
+            </p>
+            <p>
+                <label for="sebep">Şikayet Sebebi</label><br>
+                <select name="sebep">
+                        <option value="Eksik Bilgi">Eksik Bilgi</option>
+                        <option value="Yanlış Bilgi">Yanlış Bilgi</option>
+                        <option value="Kronoloji Hatası">Kronoloji Hatası</option>
+                        <option value="Bilgi Güncelleme">Bilgi Güncelleme</option>
+                        <option value="Diğer">Diğer</option>
+                </select>
+            </p>
+            <p>
+                <label for="aciklama">Açıklama</label><br>
+                <textarea name="aciklama" rows="3" cols="40"></textarea>
+            </p>
+            <button type="submit">Kaydet</button>
+        </form>
+    </main>
+</body>
+</html>

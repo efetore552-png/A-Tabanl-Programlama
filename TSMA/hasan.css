@@ -1,10 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --ana-renk: #14213D;
     --vurgu-renk: #dc2323;
     --baglanti-renk: #4b1d70;
-    --zemin: #F2F4F7;
+    --zemin: #bbd0ef;
     --metin: #1F2937;
     --kenar: #D0D5DD;
+    --zebra: #F2F4F7;
 }
 
 body {
@@ -13,6 +18,15 @@ body {
     line-height: 1.6;
     color: var(--metin);
     background-color: var(--zemin);
+    margin: 0;
+}
+
+main {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
 }
 
 h1, h2 {
@@ -41,15 +55,32 @@ footer {
     font-size: 0.9rem;
 }
 
+/*---------- Tablo ----------*/
 table {
   width: 100%;
   border-collapse: collapse;
+}
+
+caption {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 th, td {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: left;
+  border-bottom: 1px solid var(--kenar);
+}
+
+th {
+    background-color: var(--ana-renk);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--zebra);
 }
 
 th:nth-child(1), td:nth-child(1) { width: 30%; }
@@ -60,3 +91,98 @@ tr th:nth-child(4), tr td:nth-child(4) { width: 40%; }
 tr:has(th:nth-child(4)) th:nth-child(1), tr:has(td:nth-child(4)) td:nth-child(1) { width: 25%; }
 tr:has(th:nth-child(4)) th:nth-child(2), tr:has(td:nth-child(4)) td:nth-child(2) { width: 15%; }
 tr:has(th:nth-child(4)) th:nth-child(3), tr:has(td:nth-child(4)) td:nth-child(3) { width: 20%; }
+
+/*---------- Form ----------*/
+input, select, textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 10px;
+    border: 1px solid var(--kenar);
+    border-radius: 6px;
+    font: inherit;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--vurgu-renk);
+}
+
+button {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--ana-renk);
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--vurgu-renk);
+    color: white;
+}
+
+/* ---------- Üst menü ---------- */
+header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 24px;
+    background-color: var(--ana-renk);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: white;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.aktif {
+    background-color: var(--vurgu-renk);
+    color: var(--ana-renk);
+}
+
+/* ---------- Mobil Uyumluluk ---------- */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    main {
+        margin: 12px;
+        padding: 16px;
+    }
+}
