@@ -25,11 +25,11 @@
         <form id="İletişimFormu">
             <p>
                 <label for="ad">Ad</label><br>
-                <input type="text" name="ad">
+                <input type="text" id="ad" name="ad">
             </p>
             <p>
                 <label for="soyad">Soyad</label><br>
-                <input type="text" name="soyad">
+                <input type="text" id="soyad" name="soyad">
             </p>
             <p>
                 <label for="cinsiyet">Cinsiyet</label><br>
@@ -41,15 +41,15 @@
             </p>
             <p>
                 <label for="tcno">TC Numarası</label><br>
-                <input type="number" name="tc">
+                <input type="number" id="tc" name="tc">
             </p>
             <p>
                 <label for="eposta">E-Mail Adresi</label><br>
-                <input type="email" name="posta">
+                <input type="email" id="posta" name="posta">
             </p>
             <p>
                 <label for="telefon">Telefon</label><br>
-                <input type="number" name="telefon">
+                <input type="number" id="telefon" name="telefon">
             </p>
             <p>
                 <label for="kurum">Kurum/Kuruluş</label><br>
@@ -77,8 +77,10 @@
                 <label for="aciklama">Açıklama</label><br>
                 <textarea name="aciklama" rows="3" cols="40"></textarea>
             </p>
-            <button type="submit">Kaydet</button>
+            <button type="submit">Gönder</button>
         </form>
+        <p id="error" style="color: red"></p>
+        <script src="script.js"></script>
     </main>
 </body>
 </html>
