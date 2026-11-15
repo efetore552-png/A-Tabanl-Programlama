@@ -9,7 +9,6 @@
 <body>
     <header>
         <h1>Türk Silah ve Mühimmat Arşivi</h1>
-        <h2>Kategoriler</h2>
         <nav>
             <ul>
                 <li><a href="anasayfa.html">Ana Sayfa</a></li>
@@ -18,8 +17,8 @@
                 <li><a href="iletişimformu.html" class="aktif">İletişim Formu</a></li>
             </ul>
         </nav>
+        <button id="temaBtn" type="button">🌙 Karanlık Mod</button>
     </header>
-
     <main>
         <h2>İletişim Formu</h2>
         <form id="İletişimFormu">
@@ -33,7 +32,7 @@
             </p>
             <p>
                 <label for="cinsiyet">Cinsiyet</label><br>
-                <select name="cinsiyet">
+                <select id="cinsiyet" name="cinsiyet">
                         <option value="Erkek">Erkek</option>
                         <option value="Kadın">Kadın</option>
                         <option value="A101 Poşeti">A101 Poşeti</option>
@@ -53,7 +52,7 @@
             </p>
             <p>
                 <label for="kurum">Kurum/Kuruluş</label><br>
-                <select name="departman">
+                <select id="kurum" name="departman">
                         <option value="Türk Tarih Kurumu">Türk Tarih Kurumu</option>
                         <option value="Türk Dil Kurumu">Türk Dil Kurumu</option>
                         <option value="Yükseköğretim Kurulu">Yükseköğretim Kurulu</option>
@@ -65,7 +64,7 @@
             </p>
             <p>
                 <label for="sebep">Şikayet Sebebi</label><br>
-                <select name="sebep">
+                <select id="sebep" name="sebep">
                         <option value="Eksik Bilgi">Eksik Bilgi</option>
                         <option value="Yanlış Bilgi">Yanlış Bilgi</option>
                         <option value="Kronoloji Hatası">Kronoloji Hatası</option>
@@ -75,9 +74,9 @@
             </p>
             <p>
                 <label for="aciklama">Açıklama</label><br>
-                <textarea name="aciklama" rows="3" cols="40"></textarea>
+                <textarea id="aciklama" name="aciklama" rows="3" cols="40"></textarea>
             </p>
-            <button type="submit">Gönder</button>
+            <button type="submit" id="kaydet">Gönder</button>
         </form>
         <p id="error" style="color: red"></p>
         <script src="script.js"></script>
